@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: #674bb1;
+}
+.card{
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas: 
+  "one one"
+  "two three"
+  "four four"
+  ;
+  grid-gap: 1.5rem;
+  z-index: 9999;
+}
+.logo{
+  grid-area: one;
+}
+.svg2{
+  grid-area: two;
+}
+.text{
+  grid-area: three;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 2rem;
+  place-content: center;
+}
+.svg4,.svg2{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icon{
+  grid-area: four;
+}
+.logo{
+  height: auto;
+  width: max-content;
+}
+.svg3{
+  width: 100%;
+  height: 100%;
+}
+.p{
+  color: white;
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 2.5rem;
+}
+.svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #674bb1;
+}
+.pp{
+  color: #ffffff;
+  font-weight: 400;
+  font-family: Poppins;
+  font-size: 1.2rem;
+}
+.b1{
+  width: max-content;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1rem 4rem;
+  color: hsl(257, 40%, 49%);
+  font-weight: 400;
+  font-family: Poppins;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 24px hsl(0deg 0% 0% / 5%), 0 20px 48px hsl(0deg 0% 0% / 5%), 0 1px 4px hsl(0deg 0% 0% / 10%);
+  transition:
+  background-color 0.5s ease-in-out,
+  color 0.5s ease-in-out
+  ;
+}
+.icon{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.icon i{
+  transform: scale(2.5);
+  margin-left: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+.b1:hover{
+  background-color: #e980e7;
+  cursor: pointer;
+  color: #ffffff;
+}
+i:hover{
+  color: #e980e7;
+}
+@media screen and (max-width:1200px) and (min-width:400px){
+  .card{
+    width: 95%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    ;
+    padding: 2rem 0.5rem;
+  }
+  .container{
+    background-color: #674bb1;
+  }
+}
+@media screen and (max-width:400px){
+  .card{
+    width: 95%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    ;
+    padding: 2rem 0.5rem;
+    grid-row-gap: 5rem;
+  }
+  .container{
+    background-color: #674bb1;
+  }
+  .icon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .b1{
+    width: 80%;
+  }
+  .text{
+    text-align: center;
+  }
+  .b1{
+    justify-self: center;
+  }
+  .icon i{
+    margin-right: 1rem;
+  }
+}
